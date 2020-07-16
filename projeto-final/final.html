@@ -58,24 +58,34 @@
                
 
             if(n1 == n2 || n1 == n3 || n1 == n4 || n1 == n5){
-                document.write(' O número repetido é: ' + n1 + '<br>');
-                document.write(numeros.slice());
+                document.write(' O número repetido é: ' + n1 + '<br>');               
             }else if(n2 == n1 || n2 == n3 || n2 == n4 || n2 == n5){
-                document.write(' O número repetido é: ' + n2 + '<br>');
-                document.write(numeros.slice());
+                document.write(' O número repetido é: ' + n2 + '<br>');                
             }else if(n3 == n1 || n3 == n2 || n3 == n4 || n3 == n5){
-                document.write(' O número repetido é: ' + n3 + '<br>');
-                document.write(numeros.slice());
+                document.write(' O número repetido é: ' + n3 + '<br>');               
             }else if(n4 == n1 || n4 == n2 || n4 == n3 || n4 == n5){
-                document.write(' O número repetido é: ' + n4 + '<br>');
-                document.write(numeros.slice());
+                document.write(' O número repetido é: ' + n4 + '<br>');               
             }else if(n5 == n1 || n5 == n2 || n5 == n3 || n5 == n4){
-                document.write(' O número repetido é: ' + n5 + + '<br>');
-                document.write(numeros.slice());
+                document.write(' O número repetido é: ' + n5 + + '<br>');                
             }else{
                 document.write("Não temos número repetidos!")
             }
-                 
+
+            var cont = 0 + 1;
+            var repetidos = []; 
+
+            var repete = numeros.filter(function(ii,i){
+                if(numeros.indexOf(ii) !== i){
+                    repetidos.push(ii)
+                    cont++
+                }
+
+                return repetidos.indexOf(ii) == i;
+                
+            })
+
+            document.write(`repete ${cont} vezes <br>`)
+           
     </script>
 
 </body>
